@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind + daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#B4F461",
+                        "secondary": "#111111",
+                        "background": "#F9F7F3",
+                    },
+                    fontFamily: {
+                        "lexend": ["Lexend", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-lexend">
+
+    <!-- Header section start -->
+    <header class="sticky top-0 border-b z-50">
+        <div class="bg-background">
+            <div class="container mx-auto px-5 ">
+                <!-- navbar -->
+                <div class="navbar py-5 sm:py-10 gap-5">
+                    <div class="navbar-start">
+                        <a href="index.html"
+                            class="px-5 py-2 sm:px-8 sm:py-3 bg-primary text-xl font-semibold rounded-lg hover:bg-primary/80 duration-200 ease-in-out">Home</a>
+                    </div>
+                    <div class="navbar-center">
+                        <div class="flex justify-center items-center gap-3">
+                            <img class="size-9" src="./images/logo.png">
+                            <h2 class="text-xl font-semibold text-secondary hidden sm:flex">Donate Bangladesh</h2>
+                        </div>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="flex justify-center items-center gap-1 text-xl text-secondary/70 font-medium">
+                            <img class="size-6" src="./images/coin.png">
+                            <span>5500</span>
+                            <span>BDT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Main section start -->
+    <main class="container mx-auto px-5">
+        <!-- important faq section -->
+        <section class="pt-10 space-y-5">
+            
+            <div class="flex items-center gap-2">
+                <h1 class="text-2xl sm:text-3xl text-secondary font-bold">Important FAQ</h1>
+                <img class="size-10" src="./images/question.gif">
+            </div>
+
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-xl sm:text-2xl font-medium">What is DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-secondary/70 font-light">The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl sm:text-2xl font-medium">How do you select an element by its ID?</div>
+                    <div class="collapse-content">
+                        <p class="text-secondary/70 font-light">You can use document.getElementById("id") to select an element. It returns the first element with the matching ID or null if no match is found.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl sm:text-2xl font-medium">What is event delegation?</div>
+                    <div class="collapse-content">
+                        <p class="text-secondary/70 font-light">Event delegation is a technique where a single event listener is attached to a parent element to manage events triggered by its child elements. It improves performance by reducing the number of event listeners.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-xl sm:text-2xl font-medium">How do you add a class to a DOM element?</div>
+                    <div class="collapse-content">
+                        <p class="text-secondary/70 font-light">You can add a class to an element using element.classList.add("class-name"). This method modifies the class attribute without affecting existing classes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main section end -->
+</body>
+
+</html>
