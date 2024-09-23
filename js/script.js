@@ -11,7 +11,7 @@ let totalBalance = Number(totalBalanceElement.innerText);
 
 // valid input check
 function isValidInput(value){
-    if(isNaN(value) || value <= 0){
+    if(isNaN(value) || value <= 0 || value.includes('e') || value.includes('E')){
         return false;
     }
 
@@ -55,6 +55,7 @@ function toggleActiveStatus(fromButton, toButton){
 donationButton.addEventListener("click", function(){
     donationHistory.classList.add("hidden");
     donationCardContainer.classList.remove("hidden");
+    document.body.classList.add("overflow-y-scroll");
     toggleActiveStatus(historyButton, donationButton);
 });
 
@@ -62,6 +63,7 @@ donationButton.addEventListener("click", function(){
 historyButton.addEventListener("click", function(){
     donationCardContainer.classList.add("hidden");
     donationHistory.classList.remove("hidden");
+    document.body.classList.add("overflow-y-scroll");
     toggleActiveStatus(donationButton, historyButton);
 });
 
@@ -90,6 +92,7 @@ for(const donateNowButton of donateNowButtons){
             alert("Please input valid amount for donation.");
             return;
         }
+        document.body.classList.remove("overflow-y-scroll");
         document.getElementById("congrates-model").showModal();
     });
 }
