@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
+    <title>Donate Bangladesh - Home</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,12 +37,12 @@
     <!-- Header section start -->
     <header class="sticky top-0 border-b z-50">
         <div class="bg-background">
-            <div class="container mx-auto px-5">
+            <div class="container mx-auto px-2">
                 <!-- navbar -->
                 <div class="navbar py-5 sm:py-10 gap-5">
                     <div class="navbar-start">
                         <a href="blog.html"
-                            class="px-5 py-2 sm:px-8 sm:py-3 bg-primary text-xl font-semibold rounded-lg hover:bg-primary/80 duration-200 ease-in-out">Blog</a>
+                            class="px-5 py-2 sm:px-8 sm:py-3 bg-primary text-lg sm:text-xl font-semibold rounded-lg hover:bg-primary/80 duration-200 ease-in-out">Blog</a>
                     </div>
                     <div class="navbar-center">
                         <div class="flex justify-center items-center gap-3">
@@ -51,9 +51,9 @@
                         </div>
                     </div>
                     <div class="navbar-end">
-                        <div class="flex justify-center items-center gap-1 text-xl text-secondary/70 font-medium">
+                        <div class="flex justify-center items-center gap-1 text-lg sm:text-xl text-secondary/70 font-medium">
                             <img class="size-6" src="./images/coin.png">
-                            <span>5500</span>
+                            <span id="initial-balance">5500.00</span>
                             <span>BDT</span>
                         </div>
                     </div>
@@ -63,10 +63,12 @@
 
         <!-- donation and history button -->
         <div class="flex justify-center items-center backdrop-blur-sm bg-white/90">
-            <div class="py-5 sm:py-10 space-x-4 px-5">
-                <button class="px-5 py-2 sm:px-8 sm:py-3 text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donation</button>
+            <div class="py-5 sm:py-10 space-x-4 px-2">
+                <button id="donation-button"
+                    class="px-5 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl border font-semibold text-secondary rounded-lg border-primary bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donation</button>
 
-                <button class="px-5 py-2 sm:px-8 sm:py-3 text-xl font-medium text-secondary/70 rounded-lg border border-secondary/30 bg-gray-100 hover:bg-gray-200/80 duration-200 ease-in-out">History</button>
+                <button id="history-button"
+                    class="px-5 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl font-medium rounded-lg border border-secondary/30 text-secondary/70 bg-gray-100 hover:bg-gray-200/80 duration-200 ease-in-out">History</button>
             </div>
         </div>
 
@@ -74,13 +76,13 @@
     <!-- Header section end -->
 
     <!-- Main section start -->
-    <main class="container mx-auto px-5">
+    <main class="container mx-auto px-2">
         <!-- post section -->
-        <section class="py-5 sm:py-8 space-y-10">
+        <section id="donation-card-container" class="py-5 sm:py-8 space-y-10">
             <!-- card-1 -->
             <div class="card flex-col lg:flex-row card-side bg-base-100 p-5 sm:p-8 border">
                 <figure class="grow">
-                    <img class="w-ful rounded-lg" src="./images/noakhali.png"/>
+                    <img class="w-ful rounded-lg" src="./images/noakhali.png" />
                 </figure>
                 <div class="card-body p-0 pt-8 lg:px-8 basis-2/3">
                     <div class="flex items-center gap-1 bg-secondary/5 w-max px-4 py-2 rounded-md">
@@ -90,9 +92,16 @@
                     </div>
                     <div class="space-y-5">
                         <h2 class="text-xl text-secondary font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
-                        <p class="text-justify text-secondary/70 font-light">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full text-secondary/40 font-light" /> <br>
-                        <button class="w-full px-5 py-2 sm:px-8 sm:py-3 text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate Now</button>
+                        <p class="text-justify text-secondary/70 font-light">The recent floods in Noakhali have caused
+                            significant damage to homes infrastructure. Your donation will help provide essential
+                            supplies and to those affected by this disaster. Every contribution, big or small, makes
+                            difference. Please join us in supporting the relief efforts and making a positive impact on
+                            the lives of those in need.</p>
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full text-secondary/40 font-light" />
+                        <button
+                            class="w-full px-5 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
@@ -100,19 +109,29 @@
             <!-- card-2 -->
             <div class="card flex-col lg:flex-row card-side bg-base-100 p-5 sm:p-8 border">
                 <figure class="grow">
-                    <img class="w-ful rounded-lg" src="./images/feni.png"/>
+                    <img class="w-ful rounded-lg" src="./images/feni.png" />
                 </figure>
                 <div class="card-body p-0 pt-8 lg:px-8 basis-2/3">
                     <div class="flex items-center gap-1 bg-secondary/5 w-max px-4 py-2 rounded-md">
                         <img src="./images/coin.png">
-                        <span class="text-secondary/70">600</span>
+                        <span class="text-secondary/70">600.00</span>
                         <span class="text-secondary/70">BDT</span>
                     </div>
                     <div class="space-y-5">
                         <h2 class="text-xl text-secondary font-bold">Donate for Flood Relief in Feni, Bangladesh</h2>
-                        <p class="text-justify text-secondary/70 font-light">Feni district in Bangladesh has recently been hit by severe flooding, causing widespread devastation. Thousands of families have lost their homes, access to clean water, and essential resources. In this critical time, we urgently appeal for donations to support the affected communities. Your contributions can provide emergency relief, including food, shelter, and medical aid to those in desperate need. Every donation, big or small, will make a significant difference in helping these families rebuild their lives. Let us come together and extend a helping hand to bring hope and relief to Feni district.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full text-secondary/40 font-light" /> <br>
-                        <button class="w-full px-5 py-2 sm:px-8 sm:py-3 text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate Now</button>
+                        <p class="text-justify text-secondary/70 font-light">Feni district in Bangladesh has recently
+                            been hit by severe flooding, causing widespread devastation. Thousands of families have lost
+                            their homes, access to clean water, and essential resources. In this critical time, we
+                            urgently appeal for donations to support the affected communities. Your contributions can
+                            provide emergency relief, including food, shelter, and medical aid to those in desperate
+                            need. Every donation, big or small, will make a significant difference in helping these
+                            families rebuild their lives. Let us come together and extend a helping hand to bring hope
+                            and relief to Feni district.</p>
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full text-secondary/40 font-light" />
+                        <button
+                            class="w-full px-5 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
@@ -120,33 +139,62 @@
             <!-- card-3 -->
             <div class="card flex-col lg:flex-row card-side bg-base-100 p-5 sm:p-8 border">
                 <figure class="grow">
-                    <img class="w-ful rounded-lg" src="./images/quota-protest.png"/>
+                    <img class="w-ful rounded-lg" src="./images/quota-protest.png" />
                 </figure>
                 <div class="card-body p-0 pt-8 lg:px-8 basis-2/3">
                     <div class="flex items-center gap-1 bg-secondary/5 w-max px-4 py-2 rounded-md">
                         <img src="./images/coin.png">
-                        <span class="text-secondary/70">2400</span>
+                        <span class="text-secondary/70">2400.00</span>
                         <span class="text-secondary/70">BDT</span>
                     </div>
                     <div class="space-y-5">
                         <h2 class="text-xl text-secondary font-bold">Aid for Injured in the Quota Movement</h2>
-                        <p class="text-justify text-secondary/70 font-light">During the Quota Reform Movement, many individuals were injured while peacefully advocating for their rights. These injured protestors, many of them students, now need urgent medical assistance, rehabilitation, and support. We are calling for donations to help cover their medical expenses, provide them with proper care, and assist their families during this challenging time. Your contribution will directly aid in the recovery of those who stood up for justice and equality. Let us show solidarity with the injured and help them heal, both physically and emotionally, from the hardships they endured.</p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full text-secondary/40 font-light" /> <br>
-                        <button class="w-full px-5 py-2 sm:px-8 sm:py-3 text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate Now</button>
+                        <p class="text-justify text-secondary/70 font-light">During the Quota Reform Movement, many
+                            individuals were injured while peacefully advocating for their rights. These injured
+                            protestors, many of them students, now need urgent medical assistance, rehabilitation, and
+                            support. We are calling for donations to help cover their medical expenses, provide them
+                            with proper care, and assist their families during this challenging time. Your contribution
+                            will directly aid in the recovery of those who stood up for justice and equality. Let us
+                            show solidarity with the injured and help them heal, both physically and emotionally, from
+                            the hardships they endured.</p>
+                        <input type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full text-secondary/40 font-light" />
+                        <button
+                            class="w-full px-5 py-2 sm:px-8 sm:py-3 text-lg sm:text-xl border border-primary font-semibold text-secondary rounded-lg bg-primary hover:bg-primary/80 duration-200 ease-in-out">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <!-- history section, initialy hidden -->
-        <section class="hidden py-5 sm:py-8 space-y-5">
-            <div class="p-5 sm:p-8 border rounded-xl space-y-2">
-                <h2 class="text-xl font-bold text-secondary">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-                <p class="text-secondary/70 font-light">Date: <span>Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</span></p>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="congrates-model" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div class="py-4 text-center space-y-4">
+                    <h2 class="text-3xl font-bold text-center">Congrates!</h2>
+                    <img class="size-10 mx-auto" src="./images/coin.png">
+                    <p class="text-secondary/70 font-light capitalize">You have donate for humankind</p>
+                    <h3 class="text-2xl font-bold text-center">Successfully</h3>
+                </div>
+                <div class="modal-action justify-center">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn border-none hover:bg-primary duration-200 ease-in-out">Close Confirmation</button>
+                    </form>
+                </div>
             </div>
+        </dialog>
+
+        <!-- history section, initialy hidden -->
+        <section id="donation-history" class="hidden py-5 sm:py-8 space-y-5">
+            <!-- content will be add by js -->
         </section>
     </main>
     <!-- Main section end -->
+
+    <!-- script file connect -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
